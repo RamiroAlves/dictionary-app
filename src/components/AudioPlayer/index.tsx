@@ -1,4 +1,3 @@
-import { useCallback, useState } from "react";
 import { Audio } from "expo-av";
 import { AntDesign } from "@expo/vector-icons";
 import { Sound } from "./styles";
@@ -6,8 +5,6 @@ import theme from "../../theme";
 import { AudioPlayerProps } from "./interface";
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ voiceUrl }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-
   const handleClick = async () => {
     await Audio.Sound.createAsync({ uri: voiceUrl }, { shouldPlay: true });
   };

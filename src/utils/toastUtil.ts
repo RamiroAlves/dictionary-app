@@ -12,7 +12,7 @@ export function useShowToast() {
       duration: 3000,
       animationType: 'slide-in',
       style: {
-        marginTop: 20,
+        marginTop: 30,
       },
     });
   };

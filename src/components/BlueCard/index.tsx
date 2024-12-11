@@ -6,7 +6,6 @@ import theme from "../../theme";
 import AudioPlayer from "../AudioPlayer";
 
 const BlueCard: React.FC<IBlueCard> = ({ title, voice, text }) => {
-
   return (
     <Container>
       <LinearGradient
@@ -15,9 +14,7 @@ const BlueCard: React.FC<IBlueCard> = ({ title, voice, text }) => {
       >
         <Row>
           <Title>{title}</Title>
-          {voice ? (
-            <AudioPlayer voiceUrl={voice} />
-          ) : null}
+          {voice ? <AudioPlayer voiceUrl={voice} /> : null}
         </Row>
         <Row>
           <Subtitle>[{text}]</Subtitle>
